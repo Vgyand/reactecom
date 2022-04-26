@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Route, Routes
 } from "react-router-dom";
@@ -7,6 +8,11 @@ import { Home, Cart } from "./pages";
 
 
 const App = () => {
+
+  useEffect(() => {
+
+  }, [])
+
   return (
     <div className="wrapper">
       <Header />
