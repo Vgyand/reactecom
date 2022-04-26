@@ -29,3 +29,11 @@
     }
   }
 }
+.sort__rotated{
+  transition: 0.5s;
+  transform: rotate(180deg);
+}
+.sort__derotated{
+  transition: 0.5s;
+  transform: rotate(0deg);
+}
