@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
-const Categories = ({ items }) => {
+const Categories = ({ items, onClickItem }) => {
 
     const [selected, setSelected] = useState(0)
 
     const onSelectItem = (index) => {
         setSelected(index)
+        onClickItem(index)
     }
 
     return (

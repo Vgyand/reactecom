@@ -14,10 +14,12 @@ import { setPizzas as setPizzasAction } from './redux/actions/pizzas'
 const App = () => {
   const dispatch = useDispatch();
 
+
+
   useEffect(() => {
-    axios.get('http://localhost:3000/db.json')
+    axios.get('http://localhost:3001/pizzas')
       .then(res => {
-        dispatch(setPizzasAction(res.data.pizzas))
+        dispatch(setPizzasAction(res.data))
       })
   }, [])
 
