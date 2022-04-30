@@ -5,7 +5,6 @@ const SortPopup = React.memo(function SortPopup({ items }) {
     const [visiblePopup, setVisiblePopup] = useState(false)
     const sortRef = useRef()
 
-    console.log('rerendered')
 
     const handleOutsideClick = (e) => {
         if (!e.path.includes(sortRef.current)) {
@@ -41,12 +40,12 @@ const SortPopup = React.memo(function SortPopup({ items }) {
                     />
                 </svg>
                 <b>Сортировка по:</b>
-                <span onClick={() => (setVisiblePopup(!visiblePopup))}>{items[activeItem]}</span>
+                <span onClick={() => (setVisiblePopup(!visiblePopup))}>{items[activeItem].name}</span>
             </div>
             {
                 visiblePopup ? <div className="sort__popup">
                     <ul>
-                        {items.map((item, index) => <li key={index} onClick={() => onSelectItem(index)} className={activeItem === index ? 'active' : ''}>{item}</li>)}
+                        {items.map((item, index) => <li key={index} onClick={() => onSelectItem(index)} className={activeItem === index ? 'active' : ''}>{item.name}</li>)}
                     </ul>
                 </div> : ''
             }
