@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames';
 
 
+const typesNames = ['тонкое', 'традиционное'];
+const availableSizes = [26, 30, 40]
+
 const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
     const [activeType, setActiveType] = useState(types[0])
     const [activeSize, setActiveSize] = useState(sizes[0])
-    const typesNames = ['тонкое', 'традиционное'];
-    const availableSizes = [26, 30, 40]
-
 
     return (
         <div className="pizza-block">
