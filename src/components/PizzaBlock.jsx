@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames';
 import Button from './Button';
+import { useSelector } from 'react-redux';
 
 
 const typesNames = ['тонкое', 'традиционное'];
@@ -10,6 +11,7 @@ const availableSizes = [26, 30, 40]
 const PizzaBlock = ({ id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount }) => {
     const [activeType, setActiveType] = useState(types[0])
     const [activeSize, setActiveSize] = useState(0)
+
 
     const onAddPizza = () => {
         const obj = {

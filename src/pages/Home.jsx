@@ -59,7 +59,7 @@ const Home = () => {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-                {isLoaded ? items.map(item => <PizzaBlock onClickAddPizza={handleAddPizza} addedCount={cartItems[item.id] && cartItems[item.id].length} key={item.id} {...item} isLoaded={true} />) : Array(12).fill(0).map((_, index) => <PizzaLoader key={index} />)}
+                {isLoaded ? items.map(item => <PizzaBlock onClickAddPizza={handleAddPizza} addedCount={cartItems[item.id] && cartItems[item.id].items.length} key={item.id} {...item} isLoaded={true} />) : Array(12).fill(0).map((_, index) => <PizzaLoader key={index} />)}
             </div>
         </div>
     )
