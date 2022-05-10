@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames';
 import Button from './Button';
-import { useSelector } from 'react-redux';
+
 
 
 const typesNames = ['тонкое', 'традиционное'];
